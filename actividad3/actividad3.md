@@ -15,21 +15,21 @@
 
 Comando:
 
-sudo adduser usuario1
+    sudo adduser usuario1
 
 Salida:
 ![image](Media/cuser1.png)
 
 Comando:
 
-sudo adduser usuario2
+    sudo adduser usuario2
 
 Salida:
 ![image](Media/cuser2.png)
 
 Comando:
 
-sudo adduser usuario3
+    sudo adduser usuario3
 
 Salida:
 ![image](Media/cuser3.png)
@@ -39,21 +39,21 @@ Salida:
 
 Comando:
 
-sudo passwd usuario1
+    sudo passwd usuario1
 
 Salida:
 ![image](Media/pssuser1.png)
 
 Comando:
 
-sudo passwd usuario2
+    sudo passwd usuario2
 
 Salida:
 ![image](Media/pssuser2.png)
 
 Comando:
 
-sudo passwd usuario3
+    sudo passwd usuario3
 
 Salida:
 ![image](Media/pssuser3.png)
@@ -63,7 +63,7 @@ Salida:
 
 Comando:
 
-id usuario1
+    id usuario1
 
 Salida:
 ![image](Media/iduser1.png)
@@ -72,7 +72,7 @@ Salida:
 
 Comando:
 
-sudo deluser usuario3
+    sudo deluser usuario3
 
 Salida:
 ![image](Media/deluser3.png)
@@ -84,14 +84,14 @@ Salida:
 
 Comando:
 
-sudo groupadd grupo1
+    sudo groupadd grupo1
 
 Salida:
 ![image](Media/cgroup1.png)
 
 Comando:
 
-sudo groupadd grupo2
+    sudo groupadd grupo2
 
 Salida:
 ![image](Media/cgroup2.png)
@@ -100,14 +100,14 @@ Salida:
 
 Comando:
 
-sudo adduser usuario1 grupo1
+    sudo adduser usuario1 grupo1
 
 Salida:
 ![image](Media/user1group1.png)
 
 Comando:
 
-sudo adduser usuario2 grupo2
+    sudo adduser usuario2 grupo2
 
 Salida:
 ![image](Media/user2group2.png)
@@ -117,14 +117,14 @@ Salida:
 
 Comando:
 
-groups usuario1
+    groups usuario1
 
 Salida:
 ![image](Media/vergroup1.png)
 
 Comando:
 
-groups usuario2
+    groups usuario2
 
 Salida:
 ![image](Media/vergroup2.png)
@@ -133,7 +133,7 @@ Salida:
 
 Comando:
 
-sudo groupdel grupo2
+    sudo groupdel grupo2
 
 Salida:
 ![image](Media/delgroup2.png)
@@ -142,6 +142,7 @@ Salida:
 
 **3.1. Creación de Archivos y Directorios:**  
 
+    
     3.1.1 Como `usuario1`, crea un archivo llamado `archivo1.txt` en su directorio principal y escribe algo en él.
 
 
@@ -188,3 +189,20 @@ Comandos:
     ls -ld
 
 ![image](Media/ld.png)
+
+**3.3 Modificar Permisos usando `chmod` con Modo Numérico:**    Cambia los permisos del `archivo1.txt` para que sólo `usuario1` pueda leer y escribir (permisos `rw-`), el grupo pueda leer (permisos `r--`) y nadie más pueda hacer nada.
+
+Se aprecian los permisos actuales
+![image](Media/permisoactual.png)
+
+Se hace el cambio de permisos.
+Comandos:
+
+    chmod 744 archivo1.txt
+
+![image](Media/permiso1.png)
+
+Nuevos permisos.
+
+![image](Media/nuevopermiso.png)
+
