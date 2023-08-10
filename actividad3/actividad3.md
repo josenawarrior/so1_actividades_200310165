@@ -206,3 +206,79 @@ Nuevos permisos.
 
 ![image](Media/nuevopermiso.png)
 
+
+**3.4 Modificar Permisos usando `chmod` con Modo Simbólico:**     Agrega permiso de ejecución al propietario del `archivo2.txt`.
+
+Comando:
+
+    chmod o+x archivo2.txt
+
+![image](Media/permisosimx.png)
+
+Se aprecia que la asignación en los permisos con la x.
+
+![image](Media/permisosim1.png)
+
+![image](Media/permisosim2.png)
+
+
+**3.5 Cambiar el Grupo Propietario:**      Cambia el grupo propietario de `archivo2.txt` a `grupo1`.
+
+Comando:
+
+    chgrp grupo1 archivo2.txt
+
+![image](Media/grupo1archivo2.png)
+
+
+**3.6 Configurar Permisos de Directorio:**      Cambia los permisos del `directorio1` para que sólo el propietario pueda entrar (permisos `rwx`), el grupo pueda listar contenidos pero no entrar (permisos `r--`), y otros no puedan hacer nada.
+
+Comando:
+
+    chmod 740 directorio1
+
+![image](Media/permisodir.png)
+
+Cambio de permisos de directorio1.
+
+![image](Media/permisodir01.png)
+
+![image](Media/permisodir02.png)
+
+**3.7 Comprobación de Acceso:**       Intenta acceder al `archivo1.txt` y `directorio1/archivo2.txt` como `usuario2`. Nota cómo el permiso de directorio afecta el acceso a los archivos dentro de él.
+
+Comando:
+
+    cat /home/usuario1/archivo1.txt
+    
+
+![image](Media/user1archivo1.png)
+
+Comando:
+
+    cat /home/usuario1/directorio1/archivo2.txt
+
+![image](Media/user1archivo2.png)
+
+**3.8 Verificación Final:**     Verifica los permisos y propietario de los archivos y directorio nuevamente con `ls -l` y `ls -ld`.   
+
+Comando:
+
+    ls -l
+
+![image](Media/ls-l.png)
+
+    ls -ld
+
+![image](Media/ls-ld.png)
+
+
+## Reflexión: (Opcional)
+
+**¿Por qué es importante gestionar correctamente los usuarios y permisos en un sistema operativo?**  
+
+Para que los accesos a los distintos archivos y directorios esten bien fiscalizados de tal manera no pueda haber accesos no autorizados a infomación de otras áreas.
+
+**¿Qué otros comandos o técnicas conocen para gestionar permisos en Linux?**
+
+Ninguna otra.
